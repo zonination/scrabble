@@ -30,7 +30,7 @@ ggplot(abc, aes(freq, scrab.pts))+
                                seq(.01  ,   .1,  .01),
                                seq(.1   ,    1,   .1)),
                                labels=scales::percent)+
-  scale_y_continuous(limits=c(0,10))+
+  scale_y_continuous(limits=c(0,10), breaks=c(0:5)*2)+
   geom_smooth(type="lm", se=F)+
   labs(title="Scrabble Frequency",
        x="Relative Frequency of Letter",
